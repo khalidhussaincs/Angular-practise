@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="hello">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../bootstrap.css" type="text/css"/>
+    <script src="../../angular.min.js"></script>
+    <script src="../../bootstrap.js"></script>
+    <script src="calc.js"></script>
+</head>
+<body ng-controller="helloCtrl">
+
+<form action="" class="form-">
+    <h1 class="bg-success">{{helloMessage}}</h1>
+
+    <input type="number" ng-model="val1" placeholder="value 1"/> +
+    <input type="number" ng-model="val2" placeholder="value 2"/> =
+    <input type="button" value="add" ng-click="addValue()"/>  {{result}}
+
+</form>
+
+<button ng-click="txt = false">hide</button>
+<button ng-click="txt = true">show</button>
+
+ <p class="bg-primary" ng-show="txt">hey hide me</p>
+ <!--<p class="bg-primary" ng-hide="txt">hey hide me</p>-->
+
+
+</body>
+</html>

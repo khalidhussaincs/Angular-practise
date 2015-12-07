@@ -1,0 +1,24 @@
+.box1, .box2 ,.box3{
+
+    /*width: 250px;*/
+    /*height: 250px;*/
+    float: left;
+
+    background-color: #4cae4c;
+    margin-right: 250px;
+    padding: 79px 122px;
+
+
+}
+.box1{
+    background-color: #4cae4c;
+    margin-right: 250px;
+}
+.box2{
+    background-color:blue ;
+    margin-right: 250px;
+
+}
+.box3{
+    background-color: sandybrown;
+}

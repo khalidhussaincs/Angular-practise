@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html ng-app="marksheet">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../bootstrap.css" type="text/css"/>
+    <script src="../../angular.min.js"></script>
+    <script src="../../bootstrap.js"></script>
+    <script src="markshet.js"></script>
+</head>
+<body ng-controller="appCtlr">
+
+<div class="container-fluid col col-lg-8 col-lg-offset-2" style="background: url('./img/img7.jpg')no-repeat;background-size: 100% 100% ">
+    <h4 style="margin: 30px 0;padding-left: 90px">{{marksheet.title}}</h4>
+
+    <div class="row">
+
+
+        <div class="col col-lg-10">
+            <ul class="list-unstyled">
+                <li class="list-group">
+                    <img src="./img/logo5.jpg" alt="khalid photo" width="140" height="106"/>
+                </li>
+                <li class="list-group"> <strong>Name:</strong> {{marksheet.fullName}}</li>
+                <li class="list-group"> <strong>Fathers Name:</strong> {{marksheet.fathersName}}</li>
+                <li class="list-group"> <strong> Surname: </strong>{{marksheet.surname}}</li>
+                <li class="list-group"> <strong> Institute:</strong>{{marksheet.institute}} </li>
+                <li class="list-group"> <strong>Distt:</strong>{{marksheet.district}}</li>
+            </ul>
+        </div>
+
+
+        <div class="col col-lg-2">
+            <img src="./img/k.jpg " alt="" width="150px" height="150px"/>
+        </div>
+    </div>
+
+    <table class="table table-bordered table-responsive">
+        <thead class="bg-primary">
+        <tr>
+            <th>SUBJECTS</th>
+            <th>MAX MARKS</th>
+            <th>MIN MARKS</th>
+            <th>OBTAIN MARKS</th>
+        </tr>
+
+        </thead>
+        <tbody>
+        <tr ng-repeat="sub in marksheet.subject">
+            <td>{{sub.name}}</td>
+            <td>{{sub.maxMarks}}</td>
+            <td>{{sub.minMarks}}</td>
+            <td>{{sub.obtMarks}}</td>
+        </tr>
+        <tr CLASS="bg-info">
+            <td>TOTAL</td>
+            <td>550</td>
+            <td></td>
+            <td>368</td>
+        </tr>
+
+
+        </tbody>
+    </table>
+    <div class="row bg-primary" style="margin:0 0 40px 0;padding: 8px 0">
+        <div class="col col-lg-12 bg-primary">
+            <strong>Marks in words:</strong> THREE HUNDRED SIXTY EIGHT ONLY
+        </div>
+    </div>
+    <ul class="list-unstyled">
+        <li class="list-group"><strong>Resutl :</strong>{{marksheet.result}}</li>
+        <li class="list-group"><strong>Percentage</strong>{{marksheet.percentage}}</li>
+        <li class="list-group"><strong>Enrollment</strong>{{marksheet.enrollment}}</li>
+        <li class="list-group"><strong>Date</strong>{{marksheet.date}}</li>
+
+    </ul>
+
+
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html ng-app="login">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../bootstrap.css" type="text/css"/>
+    <script src="../../angular.min.js"></script>
+    <script src="../../bootstrap.js"></script>
+    <script src="login.js"></script>
+</head>
+<body ng-controller="loginCtrl">
+
+
+<nav class="navbar navbar-inverse  bg-primary" role="navigation">
+    <div class="navbar-header col-lg-2">
+        <a class="navbar-brand" href="#">Solangi</a>
+    </div>
+    <div class="pull-right">
+        <ul class="nav navbar-nav ">
+            <li class="active"><a href="../../list.html">list</a></li>
+            <li><a href="login.html">login</a></li>
+            <li><a href="../../html.html">html</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Java <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">jmeter</a></li>
+                    <li><a href="#">EJB</a></li>
+                    <li><a href="#">Jasper Report</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">One more separated link</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3" style="border: 1px solid gray" >
+            <aside >
+                <h2 class="bg-primary">Mobile</h2>
+                <ul class="list-group">
+                    <a href="">
+                        <li class="list-group-item">nokia</li>
+                    </a>
+                    <a href="">
+                        <li class="list-group-item">samsung</li>
+                    </a>
+
+                    <li class="list-group-item">Iphone</li>
+                    <li class="list-group-item">black berry</li>
+                    <li class="list-group-item">qMobile</li>
+                    <li class="list-group-item">vigo tel</li>
+                </ul>
+                <h2 class="bg-primary">laptops</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">sony</li>
+                    <li class="list-group-item">Hp</li>
+                    <li class="list-group-item">Apple</li>
+                    <li class="list-group-item">toshiba</li>
+                    <li class="list-group-item">acer</li>
+                    <li class="list-group-item">xtel</li>
+                </ul>
+            </aside>
+        </div>
+        <div class="col-lg-9">
+
+            <content>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <form class="form-groupb bg-warning ">
+                        <h1 class="bg-info text-danger text-center">login FORM</h1>
+                        <input placeholder="name:" type="text" class="form-control col-lg-11 bg-primary text-danger" ng-model="userInfo.name"  />
+                        <input placeholder="country:" type="number" class="form-control col-lg-11"  ng-model="userInfo.cnic"   />
+                        <input placeholder="email:"  type="email" class="form-control col-lg-11"  ng-model="userInfo.email"   />
+        <textarea class="form-control" placeholder="type mssage"  ng-model="userInfo.adress"  >
+        </textarea>
+                        <button class="btn btn-success pull-left" ng-click="addInfo()">submit</button>
+                    </form>
+
+                    <table class="table table-bordered">
+                        <thead class="bg-primary">
+                        <tr>
+                            <th>name</th>
+                            <th>full adress</th>
+                            <th>cnic</th>
+                            <th>email</th>
+                        </tr>
+
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="info in infomation">
+                            <td>{{info.name}}</td>
+                            <td>{{info.adress}}</td>
+                            <td>{{info.cnic}}</td>
+                            <td>{{info.email}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </content>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>
